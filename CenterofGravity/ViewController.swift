@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var topWidthTextField: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var previousResultLabel: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +60,18 @@ class ViewController: UIViewController {
         let inches = Int((centerOfGravity - Double(feet)) * 12)
         return "\(feet) ft. \(inches) in."
     }
+    var previousResult: String = ""
     func updateUI () {
+        if previousResult == "" {
+            previousResultLabel.isHidden = true
+        } else {
+            previousResultLabel.isHidden = false
+            previousResultLabel.text = "Previous result: \(previousResult)"
+        }
         if calculateCenterOfGravity() == "" {
             descriptionLabel.text = "Enter trap or shaft dimensions."
             resultLabel.isHidden = true
+            resultLabel.text = ""
             clearButton.isHidden = true
         } else if calculateCenterOfGravity() == nil {
             descriptionLabel.text = "Invalid dimensions entered.\nPlease refer to help section."
@@ -74,7 +83,11 @@ class ViewController: UIViewController {
             resultLabel.text = calculateCenterOfGravity()
             clearButton.isHidden = false
             topWidthTextField.resignFirstResponder()
+            previousResult = "\(resultLabel.text ?? "Error")"
+            
+            
         }
+        
     }
 }
 

@@ -134,6 +134,12 @@
                                     <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jgt-Hs-b0h"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous result: 15 ft. 11 in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d4-KK-aoc">
+                                <rect key="frame" x="77.666666666666686" y="488.66666666666669" width="220" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -148,7 +154,9 @@
                             <constraint firstItem="gBQ-Oi-vqV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="NFH-Pk-FqX"/>
                             <constraint firstItem="Dds-1I-454" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="NfB-t6-4EK"/>
                             <constraint firstItem="LoB-JB-5ma" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="aso-mR-Xuc"/>
+                            <constraint firstItem="3d4-KK-aoc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d1S-K1-3Bh"/>
                             <constraint firstItem="gBQ-Oi-vqV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dP8-3h-Dwg"/>
+                            <constraint firstItem="3d4-KK-aoc" firstAttribute="top" secondItem="GQR-ck-gKy" secondAttribute="bottom" constant="10" id="dkt-mm-XUJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="408-WM-mCw" secondAttribute="trailing" constant="20" id="f4R-2k-4Ln"/>
                             <constraint firstItem="GQR-ck-gKy" firstAttribute="top" secondItem="gBQ-Oi-vqV" secondAttribute="bottom" constant="5" id="gQ3-RD-KI0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dds-1I-454" secondAttribute="trailing" constant="16" id="s25-bj-vua"/>
@@ -163,6 +171,7 @@
                         <outlet property="clearButton" destination="GQR-ck-gKy" id="W0H-pg-d3g"/>
                         <outlet property="descriptionLabel" destination="408-WM-mCw" id="qeO-xr-PaB"/>
                         <outlet property="heightTextField" destination="0Ne-7B-hyS" id="xFB-If-vMu"/>
+                        <outlet property="previousResultLabel" destination="3d4-KK-aoc" id="BqR-Ef-XHx"/>
                         <outlet property="resultLabel" destination="LYR-8X-Av7" id="7DM-Ji-Ja6"/>
                         <outlet property="topWidthTextField" destination="N8p-m6-9s9" id="WCZ-kX-r1T"/>
                     </connections>
