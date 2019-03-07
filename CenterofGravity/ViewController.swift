@@ -52,7 +52,8 @@ class ViewController: UIViewController {
             let topString = topWidthTextField.text,
             let height = Double(heightString),
             let base = Double(baseString),
-            let top = Double(topString) else {return nil}
+            let top = Double(topString),
+            base + top != 0 else {return nil}
         // Center of gravity equation Y = h (b+2a) / 3 (b + a)
         let centerOfGravityInInches = ((height * 12) * (base + (top * 2.0))) / (3.0 * (base + top))
         let centerOfGravity = centerOfGravityInInches / 12
@@ -78,7 +79,7 @@ class ViewController: UIViewController {
             resultLabel.isHidden = true
             clearButton.isHidden = false
         } else {
-            descriptionLabel.text = "Distance from base to center of gravity is"
+            descriptionLabel.text = "Distance from base to center of gravity"
             resultLabel.isHidden = false
             resultLabel.text = calculateCenterOfGravity()
             clearButton.isHidden = false
